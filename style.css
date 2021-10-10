@@ -22,10 +22,7 @@ body {
   color: #009a00;
 }
 
-#images {
-  display: flex;
-}
-#images #covidEmote {
+#covidEmote {
   position: relative;
   width: 464px;
   height: 371px;
@@ -35,7 +32,7 @@ body {
   background-size: 100%;
   margin: 3rem auto;
 }
-#images #covidEmote::before {
+#covidEmote::before {
   content: "";
   position: absolute;
   right: 90%;
@@ -47,7 +44,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-#images #covidEmote::after {
+#covidEmote::after {
   content: "";
   position: absolute;
   left: 90%;
@@ -95,4 +92,23 @@ body {
 #report .deadPatients #death_number {
   color: #fa4616;
   text-shadow: 2px 2px black;
+}
+
+@media screen and (min-width: 320px) and (max-width: 812px) {
+  #covidEmote {
+    margin: 0;
+  }
+  #covidEmote::before {
+    display: none;
+  }
+  #covidEmote::after {
+    display: none;
+  }
+
+  #report {
+    flex-wrap: wrap;
+  }
+  #report div {
+    margin: 1rem 0;
+  }
 }/*# sourceMappingURL=style.css.map */
