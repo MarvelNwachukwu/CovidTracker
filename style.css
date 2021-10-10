@@ -96,7 +96,46 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 812px) {
   #covidEmote {
+    width: 100vw;
     margin: 0;
+  }
+  #covidEmote::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -25%;
+    height: 206px;
+    width: 206px;
+    background: url(./Assets/coronavirus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #covidEmote::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 80%;
+    height: 206px;
+    width: 206px;
+    background: url(./Assets/coronavirus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: rotate(-30deg);
+  }
+
+  #report {
+    flex-wrap: wrap;
+  }
+  #report div {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #covidEmote {
+    width: 464px;
+    margin: 3rem auto;
   }
   #covidEmote::before {
     display: none;
@@ -105,9 +144,6 @@ body {
     display: none;
   }
 
-  #report {
-    flex-wrap: wrap;
-  }
   #report div {
     margin: 1rem 0;
   }
